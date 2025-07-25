@@ -1,0 +1,264 @@
+Metadata-Version: 2.4
+Name: scikit-fda
+Version: 0.10.1
+Summary: Functional Data Analysis Python package.
+Maintainer-email: Carlos Ramos Carreño <vnmabus@gmail.com>
+License: BSD 3-Clause License
+        
+        Copyright (c) 2019, Grupo de Aprendizaje Automático - Universidad Autónoma de Madrid
+        All rights reserved.
+        
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that the following conditions are met:
+        
+        1. Redistributions of source code must retain the above copyright notice, this
+           list of conditions and the following disclaimer.
+        
+        2. Redistributions in binary form must reproduce the above copyright notice,
+           this list of conditions and the following disclaimer in the documentation
+           and/or other materials provided with the distribution.
+        
+        3. Neither the name of the copyright holder nor the names of its
+           contributors may be used to endorse or promote products derived from
+           this software without specific prior written permission.
+        
+        THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+        AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+        IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+        DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+        FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+        DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+        SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+        CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+        OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+        OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Project-URL: homepage, https://github.com/GAA-UAM/scikit-fda
+Project-URL: documentation, https://fda.readthedocs.io
+Project-URL: repository, https://github.com/GAA-UAM/scikit-fda
+Keywords: functional data,statistics,machine learning
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Typing :: Typed
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE.txt
+Requires-Dist: dcor
+Requires-Dist: fdasrsf!=2.5.7,>=2.2.0
+Requires-Dist: findiff
+Requires-Dist: lazy_loader
+Requires-Dist: matplotlib
+Requires-Dist: multimethod!=1.11,!=1.11.1,>=1.5
+Requires-Dist: numpy>=1.16
+Requires-Dist: pandas>=1.0
+Requires-Dist: rdata
+Requires-Dist: scikit-datasets[cran]>=0.2.2
+Requires-Dist: scikit-learn>=0.20
+Requires-Dist: scipy>=1.6.0
+Requires-Dist: typing-extensions
+Provides-Extra: docs
+Requires-Dist: cartopy; extra == "docs"
+Requires-Dist: ipykernel; extra == "docs"
+Requires-Dist: jupyter-sphinx; extra == "docs"
+Requires-Dist: myst-parser; extra == "docs"
+Requires-Dist: pillow; extra == "docs"
+Requires-Dist: pydata-sphinx-theme; extra == "docs"
+Requires-Dist: pytest; extra == "docs"
+Requires-Dist: setuptools>=41.2; extra == "docs"
+Requires-Dist: sphinx>=3; extra == "docs"
+Requires-Dist: sphinx-gallery; extra == "docs"
+Requires-Dist: sphinxcontrib-bibtex; extra == "docs"
+Provides-Extra: test
+Requires-Dist: numpy>=2; extra == "test"
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-env; extra == "test"
+Requires-Dist: pytest-subtests; extra == "test"
+Requires-Dist: scipy>=1.14; extra == "test"
+Dynamic: license-file
+
+.. image:: https://raw.githubusercontent.com/GAA-UAM/scikit-fda/develop/docs/logos/title_logo/title_logo.png
+	:alt: scikit-fda: Functional Data Analysis in Python
+
+scikit-fda: Functional Data Analysis in Python
+===================================================
+
+|python|_ |build-status| |docs| |Codecov| |repostatus| |versions| |PyPIBadge| |conda| |license| |doi|
+
+Functional Data Analysis, or FDA, is the field of Statistics that analyses
+data that depend on a continuous parameter.
+
+This package offers classes, methods and functions to give support to FDA
+in Python. Includes a wide range of utils to work with functional data, and its
+representation, exploratory analysis, or preprocessing, among other tasks
+such as inference, classification, regression or clustering of functional data.
+See documentation for further information on the features included in the
+package.
+
+Documentation
+=============
+
+The documentation is available at
+`fda.readthedocs.io/en/stable/ <https://fda.readthedocs.io/en/stable/>`_, which
+includes detailed information of the different modules, classes and methods of
+the package, along with several examples showing different functionalities.
+
+The documentation of the latest version, corresponding with the develop
+version of the package, can be found at
+`fda.readthedocs.io/en/latest/ <https://fda.readthedocs.io/en/latest/>`_.
+
+Installation
+============
+Currently, *scikit-fda* is available in Python versions above 3.8, regardless of the
+platform.
+The stable version can be installed via PyPI_:
+
+.. code::
+
+    pip install scikit-fda
+
+It is also available from conda-forge:
+.. code::
+
+    conda install -c conda-forge scikit-fda
+
+Installation from source
+------------------------
+
+It is possible to install the latest version of the package, available in the
+develop branch,  by cloning this repository and doing a manual installation.
+
+.. code:: bash
+
+    git clone https://github.com/GAA-UAM/scikit-fda.git
+    pip install ./scikit-fda
+
+Make sure that your default Python version is currently supported, or change
+the python and pip commands by specifying a version, such as ``python3.8``:
+
+.. code:: bash
+
+    git clone https://github.com/GAA-UAM/scikit-fda.git
+    python3.8 -m pip install ./scikit-fda
+
+Requirements
+------------
+*scikit-fda* depends on the following packages:
+
+* `fdasrsf <https://github.com/jdtuck/fdasrsf_python>`_ - SRSF framework
+* `findiff <https://github.com/maroba/findiff>`_ - Finite differences
+* `matplotlib <https://github.com/matplotlib/matplotlib>`_ - Plotting with Python
+* `multimethod <https://github.com/coady/multimethod>`_ - Multiple dispatch
+* `numpy <https://github.com/numpy/numpy>`_ - The fundamental package for scientific computing with Python
+* `pandas <https://github.com/pandas-dev/pandas>`_ - Powerful Python data analysis toolkit
+* `rdata <https://github.com/vnmabus/rdata>`_ - Reader of R datasets in .rda format in Python
+* `scikit-datasets <https://github.com/daviddiazvico/scikit-datasets>`_ - Scikit-learn compatible datasets
+* `scikit-learn <https://github.com/scikit-learn/scikit-learn>`_ - Machine learning in Python
+* `scipy <https://github.com/scipy/scipy>`_ - Scientific computation in Python
+* `setuptools <https://github.com/pypa/setuptools>`_ - Python Packaging
+
+The dependencies are automatically installed.
+
+Citing scikit-fda
+=================
+
+Please, if you find this software useful in your work, reference it citing the following paper:
+
+.. code-block::
+
+  @article{ramos-carreno++_2024_scikit-fda,
+    author = {Ramos-Carreño, Carlos and Torrecilla, José L. and Carbajo Berrocal, Miguel and Marcos Manchón, Pablo and Suárez, Alberto},
+    doi = {10.18637/jss.v109.i02},
+    journal = {Journal of Statistical Software},
+    month = may,
+    number = {2},
+    pages = {1--37},
+    title = {{scikit-fda: A Python Package for Functional Data Analysis}},
+    url = {https://www.jstatsoft.org/article/view/v109i02},
+    volume = {109},
+    year = {2024}
+  }
+
+
+You can additionally cite the software repository itself using:
+
+.. code-block::
+
+  @misc{ramos-carreno++_2024_scikit-fda-repo,
+    author = {The scikit-fda developers},
+    doi = {10.5281/zenodo.3468127},
+    month = feb,
+    title = {scikit-fda: Functional Data Analysis in Python},
+    url = {https://github.com/GAA-UAM/scikit-fda},
+    year = {2024}
+  }
+
+If you want to reference a particular version for reproducibility, check the version-specific DOIs available in Zenodo.
+
+Contributions
+=============
+All contributions are welcome. You can help this project grow in multiple ways,
+from creating an issue, reporting an improvement or a bug, to doing a
+repository fork and creating a pull request to the development branch.
+
+The people involved at some point in the development of the package can be
+found in the `contributors
+file <https://github.com/GAA-UAM/scikit-fda/blob/develop/THANKS.txt>`_.
+
+.. Citation
+   ========
+   If you find this project useful, please cite:
+
+   .. todo:: Include citation to scikit-fda paper.
+
+License
+=======
+
+The package is licensed under the BSD 3-Clause License. A copy of the
+license_ can be found along with the code.
+
+.. _examples: https://fda.readthedocs.io/en/latest/auto_examples/index.html
+.. _PyPI: https://pypi.org/project/scikit-fda/
+.. _conda-forge: https://anaconda.org/conda-forge/scikit-fda/
+
+.. |python| image:: https://img.shields.io/pypi/pyversions/scikit-fda.svg
+.. _python: https://badge.fury.io/py/scikit-fda
+
+.. |build-status| image:: https://github.com/GAA-UAM/scikit-fda/actions/workflows/tests.yml/badge.svg?event=push
+    :alt: build status
+    :target: https://github.com/GAA-UAM/scikit-fda/actions/workflows/tests.yml
+
+.. |docs| image:: https://readthedocs.org/projects/fda/badge/?version=latest
+    :alt: Documentation Status
+    :target: http://fda.readthedocs.io/en/latest/?badge=latest
+
+.. |Codecov| image:: https://codecov.io/gh/GAA-UAM/scikit-fda/branch/develop/graph/badge.svg
+.. _Codecov: https://app.codecov.io/gh/GAA-UAM/scikit-fda
+
+.. |repostatus| image:: https://www.repostatus.org/badges/latest/active.svg
+   :alt: Project Status: Active – The project has reached a stable, usable state and is being actively developed.
+   :target: https://www.repostatus.org/#active
+   
+.. |versions| image:: https://img.shields.io/pypi/pyversions/scikit-fda
+   :alt: PyPI - Python Version
+
+.. |PyPIBadge| image:: https://badge.fury.io/py/scikit-fda.svg
+.. _PyPIBadge: https://badge.fury.io/py/scikit-fda
+
+.. |conda| image:: https://img.shields.io/conda/vn/conda-forge/scikit-fda
+    :alt: Available in Conda
+    :target: https://anaconda.org/conda-forge/scikit-fda
+
+.. |license| image:: https://img.shields.io/badge/License-BSD%203--Clause-blue.svg
+.. _license: https://github.com/GAA-UAM/scikit-fda/blob/master/LICENSE.txt
+
+.. |doi| image:: https://zenodo.org/badge/DOI/10.5281/zenodo.3468127.svg
+    :target: https://doi.org/10.5281/zenodo.3468127

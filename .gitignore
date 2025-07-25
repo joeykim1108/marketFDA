@@ -1,0 +1,30 @@
+# .gitignore file
+
+# --- Secrets ---
+# NEVER commit your environment variables file
+.env
+
+# --- Data Files ---
+# Ignore large data files. They don't belong in a git repository.
+*.csv
+*.json
+*.db
+
+# --- Python ---
+# Ignore virtual environment folder, caches, and compiled files
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# --- IDE / OS ---
+# Ignore settings from popular code editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+
+# --- Data Files ---
+# Ignore large data files. They don't belong in a git repository.
+*.csv
+*.json
