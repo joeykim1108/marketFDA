@@ -27,7 +27,7 @@ if not API_KEY or not API_SECRET:
     print("*** ERROR: Alpaca API keys not found. Please set them in your .env file. ***")
     exit()
 
-TICKER_SYMBOL = 'SPY'
+TICKER_SYMBOL = 'QQQ'
 OUTPUT_FILENAME = f"{TICKER_SYMBOL.upper()}_data_alpaca.csv"
 TIMEZONE = 'America/New_York'
 
